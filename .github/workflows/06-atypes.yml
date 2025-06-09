@@ -1,0 +1,15 @@
+name: 06 - Activity Types
+on:
+    pull_request:
+        branches:
+            - develop
+        types: 
+            - opened
+            - synchronize
+
+jobs:
+    echoJob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print message on console
+              run: echo "Running whenever a PR is opened or synchronized AND base branch is develop"
